@@ -2,7 +2,6 @@
 <resources>
 
     <string name="app_name">轻松学英语</string>
-    <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
-
+	
 </resources>

@@ -11,10 +11,19 @@
 	<ImageView
 	    android:id="@+id/topMryj"
 	    android:layout_width="wrap_content"
-	    android:layout_height="230px"
+	    android:layout_height="430px"
 	    android:layout_alignParentLeft="true"
 	    android:layout_alignParentRight="true"
 	    android:scaleType="fitXY"
 	    android:src="@drawable/top_1" />
+
+	<TextView
+	    android:id="@+id/Test"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentBottom="true"
+	    android:layout_centerHorizontal="true"
+	    android:layout_marginBottom="298dp"
+	    android:text="TextView" />
 	
 </RelativeLayout>

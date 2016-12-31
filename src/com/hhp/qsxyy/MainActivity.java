@@ -1,16 +1,34 @@
 package com.hhp.qsxyy;
 
 import android.app.Activity;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 public class MainActivity extends Activity {
-
+	String AppName = "qsxyy";
+	SharedPreferences sp = getSharedPreferences(AppName, MODE_PRIVATE);
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		if (!sp.getBoolean("isLoged", false)) {
+			SharedPreferences.Editor editor = sp.edit();
+			editor.putString("uname", "胡航平");
+			editor.putString("upassword", "0621");
+			editor.putBoolean("isLoged", true);
+			editor.commit();
+		}
+		
+		
+		
+		TextView view = (TextView) findViewById(R.id.Test);
+		view.setText("用户名:"+sp.getString("uname", "王溢达"));
+		
+		
+		
 	}
 
 	@Override
